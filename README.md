@@ -14,7 +14,7 @@ A lightweight (WinUI 3) utility that brings your desktop to life by rendering vi
 -   **Low Resources**: Hardware accelerated rendering.
 
 ## Installation
-1.  Download the latest release from the [Releases Page](https://github.com/dparksports/DesktopLiveWallpaper/releases).
+1.  Download the latest release: [**DesktopLiveWallpaper-v1.0.10.zip**](https://github.com/dparksports/DesktopLiveWallpaper/releases/download/v1.0.10/DesktopLiveWallpaper-v1.0.10.zip)
 2.  Extract the ZIP file.
 3.  Run `DesktopLiveWallpaper.exe`.
 
