@@ -6,7 +6,9 @@ A lightweight, floating video player designed for multitasking. Play any YouTube
 
 ## Features
 
-- **Floating Window Mode**: Launch a sleek, resizable player that stays out of your way but remains accessible.
+- **Floating Window Mode**: Launch a sleek, borderless player that stays out of your way but remains accessible.
+- **Auto-Hide Controls**: Mouse over the window to reveal controls; mouse away for a clean, distraction-free view.
+- **Drag & Drop**: Click and drag anywhere on the video surface to move the window.
 - **Robust YouTube Support**: Powered by **yt-dlp**, ensuring playback even for age-restricted or copyright-protected videos that standard players block.
 - **Local File Support**: Drag and drop or browse for MP4, MKV, and MOV files.
 - **Persistent Settings**: Remembers your volume, mute status, and last played video between sessions.
@@ -40,3 +42,7 @@ A lightweight, floating video player designed for multitasking. Play any YouTube
 1. Clone the repository.
 2. Open `DesktopLiveWallpaper.sln` in Visual Studio 2022.
 3. Build for `x64`.
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
