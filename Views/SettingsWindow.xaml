@@ -1,0 +1,30 @@
+<Window
+    x:Class="DesktopLiveWallpaper.Views.SettingsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10" Padding="20">
+        <TextBlock Text="Settings" Style="{StaticResource TitleTextBlockStyle}"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="VideoPathBox" Header="Video URL/Path" PlaceholderText="http://..." Width="300" HorizontalAlignment="Left"/>
+            <Button Content="..." Click="OnBrowseClick" Grid.Column="1" VerticalAlignment="Bottom" Margin="5,0,0,0"/>
+        </Grid>
+        <Slider x:Name="VolumeSlider" Header="Volume" Minimum="0" Maximum="1" StepFrequency="0.1" Width="300"/>
+        <CheckBox x:Name="MuteCheckBox" Content="Mute Audio"/>
+        
+        <Expander Header="Error Console" HorizontalAlignment="Stretch" Width="400" IsExpanded="True">
+            <ScrollViewer Height="150">
+                <TextBox x:Name="LogConsole" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" BorderThickness="0"/>
+            </ScrollViewer>
+        </Expander>
+
+        <Button Content="Apply" Click="OnSaveClick" HorizontalAlignment="Right"/>
+    </StackPanel>
+</Window>

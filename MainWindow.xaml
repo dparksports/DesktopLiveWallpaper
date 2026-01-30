@@ -1,0 +1,53 @@
+<Window
+    x:Class="DesktopLiveWallpaper.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Video Player -->
+        <MediaPlayerElement Grid.Row="0" x:Name="Player" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" AutoPlay="True"/>
+        
+        <!-- Loading Indicator Overlay -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10" Visibility="Collapsed" x:Name="LoadingPanel">
+            <TextBlock Text="Loading Video..." Foreground="White" FontSize="24" HorizontalAlignment="Center"/>
+            <ProgressRing IsActive="True" Width="50" Height="50" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Controls Panel -->
+        <StackPanel Grid.Row="1" Background="#202020" Padding="20" Spacing="10">
+            <TextBlock Text="Video Source (URL or Path)" Foreground="White" FontWeight="Bold"/>
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Column="0" x:Name="VideoPathBox" PlaceholderText="Enter YouTube URL or Local Path"/>
+                <Button Grid.Column="1" Content="Browse" Click="OnBrowseClick"/>
+                <Button Grid.Column="2" Content="Play" Click="OnPlayClick" Style="{StaticResource AccentButtonStyle}"/>
+            </Grid>
+
+            <Grid ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0" x:Name="MuteCheckBox" Content="Mute" Foreground="White"/>
+                <Slider Grid.Column="1" x:Name="VolumeSlider" Minimum="0" Maximum="1" StepFrequency="0.1" Value="0.5"/>
+            </Grid>
+
+            <Expander Header="Error Console" HorizontalAlignment="Stretch" IsExpanded="False" Foreground="White">
+                <TextBox x:Name="LogConsole" IsReadOnly="True" Height="100" AcceptsReturn="True" TextWrapping="Wrap" FontFamily="Consolas"/>
+            </Expander>
+        </StackPanel>
+    </Grid>
+</Window>
