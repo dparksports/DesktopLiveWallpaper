@@ -34,4 +34,4 @@ A lightweight (WinUI 3) utility that brings your desktop to life by rendering vi
 -   .NET 8 Runtime (usually included or prompted)
 
 ## License
-MIT License. Free and Open Source.
+Apache License 2.0. Free and Open Source.
