@@ -34,6 +34,7 @@ namespace DesktopLiveWallpaper.Interop
         public const int GWL_EXSTYLE = -20;
         public const int WS_EX_TOOLWINDOW = 0x00000080;
         public const int WS_EX_AppWindow = 0x00040000;
+        public const int WS_CAPTION = 0x00C00000;
 
         [DllImport("user32.dll", SetLastError = true)]
         public static extern int GetWindowLong(IntPtr hWnd, int nIndex);
@@ -64,6 +65,15 @@ namespace DesktopLiveWallpaper.Interop
             SendMessageTimeout(progman, 0x052C, new IntPtr(0), IntPtr.Zero, 0 /*SMTO_NORMAL*/, 1000, out result);
             return progman;
         }
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
 
         [DllImport("user32.dll")]
         public static extern int GetSystemMetrics(int nIndex);

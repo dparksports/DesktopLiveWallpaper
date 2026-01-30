@@ -11,6 +11,7 @@
     <WindowsPackageType>None</WindowsPackageType>
     <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
     <NoWarn>$(NoWarn);NETSDK1206</NoWarn>
     
     <!-- Fix for Self-Contained build defaulting to AnyCPU -->

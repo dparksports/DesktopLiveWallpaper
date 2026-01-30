@@ -42,20 +42,7 @@ namespace DesktopLiveWallpaper
             IntPtr windowHandle = WindowNative.GetWindowHandle(m_window);
             Log.Write($"Main Window Handle: {windowHandle}");
 
-            Microsoft.UI.WindowId windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(windowHandle);
-            AppWindow appWindow = AppWindow.GetFromWindowId(windowId);
-
-            // 4. Configure Window (Presenter)
-            if (appWindow != null)
-            {
-                appWindow.SetPresenter(AppWindowPresenterKind.Overlapped);
-                // Force standard window
-                var presenter = appWindow.Presenter as OverlappedPresenter;
-                presenter.IsResizable = true;
-                presenter.IsMaximizable = true;
-                presenter.IsMinimizable = true;
-                presenter.SetBorderAndTitleBar(true, true);
-            }
+            // Note: Window configuration (Borderless, etc.) is now handled inside MainWindow.xaml.cs
             
             // 5. Set Video Source
             string videoPath = ConfigService.Config.VideoPath;
