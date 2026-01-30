@@ -1,6 +1,6 @@
 # Desktop Live Wallpaper for Windows
 
-![Desktop Live Wallpaper](file:///C:/Users/k2/.gemini/antigravity/brain/4ea893d4-eeff-4f89-9bd0-1d3d9d2967b9/desktop_live_wallpaper_nature_1769773380050.png)
+![Desktop Live Wallpaper](./Assets/screenshot.png)
 
 A lightweight (WinUI 3) utility that brings your desktop to life by rendering video wallpapers directly behind your desktop icons. Supports local video files and YouTube URLs.
 
